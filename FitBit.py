@@ -3,8 +3,6 @@ import mysql.connector as mysql
 import sys
 import string
 import re
-import yaml
-import optget
 
 class FitBit(object):
 	"""
