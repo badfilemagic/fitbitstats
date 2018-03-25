@@ -140,7 +140,7 @@ class FitBit(object):
 		for date in data:
 			data[date].insert(0,date)	
 			query = """INSERT INTO nutrition (days, calories, fat, fiber, carbs, sodium, protein, water) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"""
-			#self._cursor.execute(query,data[date])	
+			self._cursor.execute(query,data[date])	
 	
 	def _add_sleep(self, entries):
 		"""
@@ -150,7 +150,7 @@ class FitBit(object):
 			query = """INSERT INTO sleep
 				(starttime, endtime, minsleep, minwake, numwakes, minbed, minrem, minlight, mindeep)
 				VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"""
-			#self._cursor.execute(query,ent)			
+			self._cursor.execute(query,ent)			
 	
 	def _parse_line(self, entry):
 		"""

@@ -60,10 +60,10 @@ if __name__ == '__main__':
 						 	
 
 	
-	fb = FitBit
+	fb = FitBit.FitBit()
 	fb.load_file(fname)
-	fb.connect(uname,passw,hname,dbnam)
+	fb.connectdb(uname,passw,hname,dbnam)
 	fb.insert_data()
 	fb.dbcommit()
-	db.dbclose()
+	fb.dbclose()
 	
