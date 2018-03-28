@@ -65,6 +65,7 @@ class FitBit(object):
 				# daily nutrition stats
 				for line in nutrition.split("\n"):
 					val = line.split('","')[-1:][0][:-1]
+					val = re.sub('\,','',val)
 					if len(val) > 0:
 						nut.append(val)
 				self._log["Daily Totals"][logdate] = nut

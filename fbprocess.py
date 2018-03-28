@@ -34,7 +34,7 @@ if __name__ == '__main__':
 			hname = a
 		elif o in ("-d", "--db"):
 			dbnam = a
-		elif i in ("-f", "--file"):
+		elif o in ("-f", "--file"):
 			fname = a
 		else:
 			assert False, "unknown option"
